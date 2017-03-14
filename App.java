@@ -34,7 +34,15 @@ public class App {
           System.out.println(individualAnimal.mAge + "years old");
         }
       } else if(userChoice.equals("Unadopted Animals")){
-
+        for(Animal individualAnimal : allAnimals ){
+          if(!(individualAnimal.mAdopted)){
+            System.out.println("----------------");
+            System.out.println(individualAnimal.mName);
+            System.out.println("the " + individualAnimal.mSpecies);
+            System.out.println(individualAnimal.mSex);
+            System.out.println(individualAnimal.mAge + "years old");
+          }
+        }
       }else if(userChoice.equals("Add Pet")){
         System.out.println("What is your pets name?");
         String userPetName = myConsole.readLine();
